@@ -1,5 +1,6 @@
 public class RunnerMain {
     public static void main(String[] args){
-        new VirtualPet();
+        VirtualPet v = new VirtualPet();
+        v.feed();
     }
 }
