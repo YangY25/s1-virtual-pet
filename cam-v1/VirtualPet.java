@@ -64,6 +64,9 @@ public class VirtualPet {
         }else if(health >= 50){
             face.setMessage("I'm not feeling well");
             face.setImage("verysick");
+        }else if(health >= 20){
+            face.setMessage("...");
+            face.setImage("dead");
         }
     }
 
