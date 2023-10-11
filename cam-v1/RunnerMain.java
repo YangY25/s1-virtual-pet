@@ -7,20 +7,20 @@ public class RunnerMain {
         v.exercise();
         takeABeat(1000);
         v.feed();
+        takeABeat(1000);
+        v.play();
         String ans = getAnswer("How are you?");
-        if(ans.equals("Good")){
-            v.respondPostitively();
-        }
+        System.out.println(ans);
     }
 
     public String getAnswer(String q){
         String s = (String)JOptionPane.showInputDialog(
                     new JFrame(),
-                    "Your Message",
-                    "Your Title",
+                    q,
+                    "Get a Respound",
                     JOptionPane.PLAIN_MESSAGE
-                );
-                if(s.equals("Yes"));
+        );
+        return s;
 
     }
 
