@@ -8,6 +8,7 @@ public class VirtualPet {
     VirtualPetFace face;
     int hunger = 0;   // how hungry the pet is.
     int health = 100;
+    boolean late = false;
     
     // constructor
     public VirtualPet() {
@@ -72,7 +73,12 @@ public class VirtualPet {
 
     public void sleep() {
         hunger = hunger + 1;
-        face.setImage("asleep");
+        if (late == true){
+            face.setImage("asleep");
+        }else{
+            face.setImage("normal");
+            face.setMessage("It's not time to sleep yet");
+        }
     }
 
     public void today(){
@@ -94,7 +100,15 @@ public class VirtualPet {
             face.setMessage("I failed my test today");
         }else{
             face.setImage("happy");
-            face.setMessage("I get gull credit on my test today");
+            face.setMessage("I get full credit on my test today");
+        }
+    }
+
+    public void time(String get_time){
+        if (get_time.equals("No")){
+            late = false;
+        }else{
+            late = true;
         }
     }
 
