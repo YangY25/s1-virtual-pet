@@ -112,6 +112,17 @@ public class VirtualPet {
         }
     }
 
+    public void gift(){
+        int min = 1; 
+        int max = 2;
+        int random_int = (int)Math.floor(Math.random() * (max - min + 1) + min);
+        if (random_int == 1){
+            face.setImage("pushingdaisies");
+        }else{
+            face.setImage("loveflower");
+        }
+    }
+
     public void notToday(){
         hunger = hunger + 5;
         face.setImage("normal");

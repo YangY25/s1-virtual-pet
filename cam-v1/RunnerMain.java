@@ -29,6 +29,8 @@ public class RunnerMain {
         String ans2 = getAnswer("Is it night right now?");
         v.time(ans2);
         v.sleep();
+        takeABeat(1000);
+        
     }
 
     public String getAnswer(String q){
