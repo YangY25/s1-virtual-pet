@@ -75,6 +75,35 @@ public class VirtualPet {
         face.setImage("asleep");
     }
 
+    public void today(){
+        hunger = hunger + 5;
+        int min = 1; 
+        int max = 5;
+        int random_int = (int)Math.floor(Math.random() * (max - min + 1) + min);
+        if (random_int == 1){
+            face.setImage("love");
+            face.setMessage("I met my crush today");
+        }else if (random_int == 2){
+            face.setImage("normal");
+            face.setMessage("I did nothing today");
+        }else if (random_int == 3){
+            face.setImage("shocked");
+            face.setMessage("I watched a show that shocked me");
+        }else if (random_int == 4){
+            face.setImage("angry");
+            face.setMessage("I failed my test today");
+        }else{
+            face.setImage("happy");
+            face.setMessage("I get gull credit on my test today");
+        }
+    }
+
+    public void notToday(){
+        hunger = hunger + 5;
+        face.setImage("normal");
+        face.setMessage("Fine...");
+    }
+
     public int getHealth(){
         return health;
     }
