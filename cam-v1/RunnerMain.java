@@ -30,7 +30,7 @@ public class RunnerMain {
         v.time(ans2);
         v.sleep();
         takeABeat(1000);
-        
+        v.gift();
     }
 
     public String getAnswer(String q){
