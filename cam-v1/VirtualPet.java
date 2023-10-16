@@ -113,9 +113,10 @@ public class VirtualPet {
     }
 
     public void gift(){
-        int min = 1; 
-        int max = 2;
-        int random_int = (int)Math.floor(Math.random() * (max - min + 1) + min);
+        face.setMessage("Thank you for playing with me!");
+        int minn = 1; 
+        int maxx = 2;
+        int random_int = (int)Math.floor(Math.random() * (maxx - minn + 1) + minn);
         if (random_int == 1){
             face.setImage("pushingdaisies");
         }else{
